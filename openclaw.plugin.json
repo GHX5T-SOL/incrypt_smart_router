@@ -1,0 +1,10 @@
+{
+  "name": "incrypt-smart-router",
+  "version": "1.0.0",
+  "description": "Smart AI routing — compress context, route by complexity, cache, free-first.",
+  "main": "./dist/index.js",
+  "openclaw": {
+    "router": true,
+    "endpoint": "http://localhost:3140/v1/chat/completions"
+  }
+}

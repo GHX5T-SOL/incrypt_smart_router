@@ -1,0 +1,68 @@
+{
+  "name": "incrypt-smart-router",
+  "version": "1.0.0",
+  "description": "Smart AI routing engine for OpenClaw — compress context, route by complexity, cache responses, free-first.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "incrypt-router": "./dist/cli.js"
+  },
+  "openclaw": {
+    "extensions": ["./dist/index.js"]
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "docs", "openclaw.plugin.json"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/"
+  },
+  "keywords": [
+    "llm",
+    "router",
+    "smart-routing",
+    "openclaw",
+    "incrypt",
+    "compression",
+    "token-optimization",
+    "ai-agents",
+    "cost-optimization"
+  ],
+  "author": "Incrypt Network <incryptinvestments@protonmail.com> (https://incrypt.network)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/incrypt-network/incrypt-smart-router.git"
+  },
+  "dependencies": {
+    "fastify": "^5.1.0",
+    "@fastify/cors": "^10.0.0",
+    "zod": "^3.24.0",
+    "lru-cache": "^11.0.0"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2025.1.0"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
