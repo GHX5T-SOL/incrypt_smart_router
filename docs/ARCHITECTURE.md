@@ -24,4 +24,8 @@ OpenClaw/Client → POST /v1/chat/completions → Smart Router
 
 ## Config
 
-Loaded from environment; see `.env.example` and `docs/OPENCLAW_INTEGRATION.md`.
+Loaded from environment; see `.env.example` and [docs/OPENCLAW_INTEGRATION.md](OPENCLAW_INTEGRATION.md).
+
+## Comparison and diagrams
+
+For a comparison with ClawRouter, claw-compactor, and TokenWatch, and for Mermaid/ASCII flow diagrams, see the main [README](../README.md#-how-it-works).

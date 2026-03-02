@@ -82,15 +82,16 @@ export const PAID_PROVIDERS: ProviderConfig[] = [
     baseUrl: "https://api.anthropic.com",
     envKey: "ANTHROPIC_API_KEY",
   },
-  {
-    id: "google",
-    name: "Google",
-    tier: "standard",
-    free: false,
-    modelId: "gemini-1.5-flash",
-    baseUrl: "https://generativelanguage.googleapis.com/v1beta",
-    envKey: "GOOGLE_AI_API_KEY",
-  },
+  // Google Gemini uses a different API shape (generateContent); not yet implemented in gateway.
+  // {
+  //   id: "google",
+  //   name: "Google",
+  //   tier: "standard",
+  //   free: false,
+  //   modelId: "gemini-1.5-flash",
+  //   baseUrl: "https://generativelanguage.googleapis.com/v1beta",
+  //   envKey: "GOOGLE_AI_API_KEY",
+  // },
 ];
 
 export function getProvidersForTier(tier: "simple" | "standard" | "complex", env: NodeJS.ProcessEnv): ProviderConfig[] {

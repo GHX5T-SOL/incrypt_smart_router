@@ -57,7 +57,11 @@ export function createRouter(config: RouterConfig) {
 
     const providers = getProvidersForTier(tier, process.env);
     if (providers.length === 0) {
-      throw new Error(`No provider available for tier: ${tier}. Add API keys to .env for paid tiers.`);
+      throw new Error(
+        `No provider available for tier: ${tier}. Add at least one API key to .env. ` +
+          `Free keys: GROQ_API_KEY (https://console.groq.com), CEREBRAS_API_KEY, or HF_TOKEN (HuggingFace). ` +
+          `Paid: OPENAI_API_KEY, ANTHROPIC_API_KEY for standard/complex tiers.`
+      );
     }
 
     const start = Date.now();

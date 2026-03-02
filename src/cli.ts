@@ -27,7 +27,7 @@ Environment:
   HF_TOKEN                    Optional — HuggingFace
 
 OpenClaw: Point your agent to http://localhost:3140/v1/chat/completions
-Docs: https://github.com/incrypt-network/incrypt-smart-router
+Docs: https://github.com/GHX5T-SOL/incrypt_smart_router
 `);
   process.exit(0);
 }
